@@ -1,16 +1,16 @@
-# ecommerce-selenium-automation
+# E-Commerce Web Automation Testing Framework
 E-commerce web automation testing framework using Python, Selenium WebDriver and PyTest.
-# E-Commerce Selenium Automation Framework
+# E-Commerce Web Automation Testing Framework
 
 > **Project Status: Work in Progress**
 
-## 📌 Overview
+##  Overview
 
 This repository is being developed as a web automation testing framework for an e-commerce application using **Python, Selenium WebDriver, and PyTest**.
 
 The planned framework will follow the **Page Object Model (POM)** design pattern and will cover key e-commerce workflows such as login, product selection, cart operations, and checkout.
 
-## 🛠️ Technologies
+##  Technologies
 
 - Python
 - Selenium WebDriver
@@ -22,13 +22,13 @@ The planned framework will follow the **Page Object Model (POM)** design pattern
 - WebDriver Manager
 - Git & GitHub
 
-## 🧪 Application Under Test
+##  Application Under Test
 
 SauceDemo
 
 https://www.saucedemo.com/
 
-## 📂 Planned Project Structure
+## Planned Project Structure
 
 ```text
 ecommerce-selenium-automation/
@@ -56,7 +56,7 @@ ecommerce-selenium-automation/
 └── README.md
 ```
 
-## 🎯 Planned Test Scenarios
+##  Planned Test Scenarios
 
 ### Login
 - Valid login
@@ -79,13 +79,13 @@ ecommerce-selenium-automation/
 - Complete order
 - Verify order confirmation
 
-## 🏗️ Planned Framework Design
+##  Planned Framework Design
 
 The framework will use the **Page Object Model (POM)** to separate page elements and page actions from test cases.
 
 The project will also include reusable browser setup, assertions, test execution, and reporting.
 
-## 📚 Learning Objectives
+##  Learning Objectives
 
 This project is being developed to gain practical experience with:
 
@@ -100,13 +100,13 @@ This project is being developed to gain practical experience with:
 - HTML reporting
 - Git and GitHub
 
-## 🚧 Current Status
+##  Current Status
 
-The repository structure and framework design have been created.
+The initial repository structure and framework plan have been created. Automation implementation is currently in progress.
 
 Implementation of automated test cases is in progress.
 
-## 👤 Author
+##  Author
 
 **Tejaswi Lenkalapally**
 
