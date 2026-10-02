@@ -1,112 +1,214 @@
-# E-Commerce Web Automation Testing Framework
-E-commerce web automation testing framework using Python, Selenium WebDriver and PyTest.
-# E-Commerce Web Automation Testing Framework
+# E-Commerce Web Automation Framework
 
-> **Project Status: Work in Progress**
+A Selenium-based test automation framework built using **Python, Selenium WebDriver, and Pytest** to automate functional testing of an e-commerce web application.
 
-##  Overview
+## Project Overview
 
-This repository is being developed as a web automation testing framework for an e-commerce application using **Python, Selenium WebDriver, and PyTest**.
+This project automates key user workflows of the **Demo Web Shop** application.
 
-The planned framework will follow the **Page Object Model (POM)** design pattern and will cover key e-commerce workflows such as login, product selection, cart operations, and checkout.
+Automated scenarios include:
 
-##  Technologies
+- Website launch verification
+- Product search
+- Invalid login validation
+- Add product to cart
+- Verify product in cart
+- Remove product from cart
 
-- Python
-- Selenium WebDriver
-- PyTest
-- Page Object Model (POM)
-- XPath
-- CSS Selectors
-- PyTest HTML Reports
-- WebDriver Manager
-- Git & GitHub
+The framework also includes reusable Page Objects, explicit waits, centralized test data, logging, failure screenshots, and HTML test reporting.
 
-##  Application Under Test
+## Application Under Test
 
-SauceDemo
+**Demo Web Shop**
 
-https://www.saucedemo.com/
+https://demowebshop.tricentis.com/
 
-## Planned Project Structure
+## Tech Stack
+
+- **Language:** Python
+- **Automation:** Selenium WebDriver
+- **Testing Framework:** Pytest
+- **Reporting:** Pytest HTML
+- **Browser:** Google Chrome
+- **Design Pattern:** Page Object Model (POM)
+- **Version Control:** Git & GitHub
+- **IDE:** Visual Studio Code
+
+## Project Structure
 
 ```text
 ecommerce-selenium-automation/
 │
+├── config/
+│   └── config.ini
+│
+├── data/
+│   └── test_data.py
+│
 ├── pages/
+│   ├── __init__.py
+│   ├── home_page.py
 │   ├── login_page.py
-│   ├── products_page.py
-│   ├── cart_page.py
-│   └── checkout_page.py
+│   ├── product_page.py
+│   └── cart_page.py
 │
 ├── tests/
-│   ├── test_login.py
-│   ├── test_products.py
-│   ├── test_cart.py
-│   └── test_checkout.py
+│   ├── __init__.py
+│   ├── demo_test.py
+│   ├── login_test.py
+│   ├── test_search.py
+│   ├── test_product.py
+│   └── test_cart.py
 │
 ├── utils/
+│   ├── __init__.py
+│   ├── config_reader.py
+│   └── logger.py
 │
 ├── screenshots/
 ├── reports/
+├── logs/
 │
 ├── conftest.py
 ├── pytest.ini
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
-##  Planned Test Scenarios
+## Framework Design
 
-### Login
-- Valid login
-- Invalid login
-- Login validation
+The framework follows the **Page Object Model (POM)** design pattern.
 
-### Products
-- Verify products page
-- Verify product information
-- Add product to cart
+Page-specific classes contain:
 
-### Cart
-- Verify added products
-- Remove product
-- Navigate to checkout
+- Web element locators
+- Page actions
+- Explicit waits
+- Logging
 
-### Checkout
-- Enter customer information
-- Validate checkout
-- Complete order
-- Verify order confirmation
+Test files contain the test scenarios and assertions.
 
-##  Planned Framework Design
+This separation makes the automation code more reusable and maintainable.
 
-The framework will use the **Page Object Model (POM)** to separate page elements and page actions from test cases.
+## Automated Test Cases
 
-The project will also include reusable browser setup, assertions, test execution, and reporting.
+| Test Case | Description |
+|---|---|
+| `test_open_website` | Verifies that the application opens successfully |
+| `test_invalid_login` | Validates login error handling with invalid credentials |
+| `test_search_product` | Verifies product search functionality |
+| `test_add_product_to_cart` | Verifies that a product can be added to the cart |
+| `test_product_in_cart` | Verifies that the selected product appears in the cart |
+| `test_remove_product_from_cart` | Verifies product removal from the cart |
 
-##  Learning Objectives
+## Test Execution
 
-This project is being developed to gain practical experience with:
+Install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run all tests:
+
+```bash
+pytest -v
+```
+
+Generate an HTML test report:
+
+```bash
+pytest -v --html=reports/report.html --self-contained-html
+```
+
+## Test Results
+
+The current automation suite contains **6 test cases**.
+
+Latest execution:
+
+```text
+6 passed
+```
+
+## Reporting
+
+The framework generates an HTML report containing:
+
+- Test execution status
+- Passed/failed test cases
+- Execution duration
+- Environment information
+
+Report location:
+
+```text
+reports/report.html
+```
+
+## Logging
+
+Execution logs are generated in:
+
+```text
+logs/test_execution.log
+```
+
+The framework records important automation activities such as:
+
+- Opening pages
+- Searching for products
+- Login actions
+- Adding products to cart
+- Removing products from cart
+
+## Failure Screenshots
+
+The framework automatically captures a screenshot when a test fails.
+
+Screenshots are stored in:
+
+```text
+screenshots/
+```
+
+These generated files are excluded from Git using `.gitignore`.
+
+## Configuration
+
+Application configuration is maintained separately in:
+
+```text
+config/config.ini
+```
+
+Example:
+
+```ini
+[DEFAULT]
+base_url = https://demowebshop.tricentis.com/
+browser = chrome
+timeout = 15
+```
+
+## Key Automation Concepts Demonstrated
 
 - Selenium WebDriver
 - Python automation
-- PyTest
+- Pytest
 - Page Object Model
-- Web element locators
-- Assertions
-- Test case automation
-- Test execution
+- Explicit waits
+- CSS selectors
+- Test assertions
+- Test data separation
+- Configuration management
+- Logging
 - HTML reporting
-- Git and GitHub
+- Failure screenshot capture
+- Git & GitHub
 
-##  Current Status
-
-The initial repository structure and framework plan have been created. Automation implementation is currently in progress.
-
-Implementation of automated test cases is in progress.
-
-##  Author
+## Author
 
 **Tejaswi Lenkalapally**
 
